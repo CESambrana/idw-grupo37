@@ -147,11 +147,7 @@ footer {
   font-size: 1.6rem;
   text-align: c;
 }
-@media (min-width: 768px) {
-  .campo_label {
-    text-align: right;
-  }
-}
+
 
 .campo_input {
   flex: 1;
