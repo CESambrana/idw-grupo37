@@ -5,6 +5,7 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 62.5%;
 }
+
 header{
     width: 100%;
     height: 25rem;
@@ -12,6 +13,14 @@ header{
     background-color: rgb(17, 149, 226);
     display: flex;
     flex-direction: column;
+}
+
+main{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .logos{
     display: flex;
@@ -53,6 +62,55 @@ header{
 
 
 main{
+    font-size: 2rem;
     background-color: antiquewhite;
     min-height: 70rem;
 }
+
+.infoIdwsa {
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    text-justify: center;
+    margin: 4rem;
+    max-width: 90rem;
+    background-color: rgb(215, 242, 255);
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.infoIdwsaP{
+    font-size: 2rem;
+}
+
+.infoPersonal{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    max-width: 90rem;
+    border-radius: 10px;
+    padding: 1rem;
+    text-justify: center;
+    background-color: rgb(215, 242, 255);
+    font-size: 3rem;
+}
+
+.personal{
+    margin: 2rem;
+    font-size: 4rem;
+}
+.personal ul{
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+footer {
+    width: 100%;
+    font-size: 2rem;
+    background-color: rgb(230, 215, 198);
+    text-align: center;
+}
+
+
+
