@@ -53,6 +53,32 @@ header{
 
 
 main{
+    font-size: 2rem;
     background-color: antiquewhite;
     min-height: 70rem;
+}
+
+.infoIdwsa {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    text-justify: center;
+}
+
+.infoIdwsaP{
+    font-size: 2rem;
+}
+
+.infoPersonal{
+    margin-left: 2rem;
+    font-size: 3rem;
+}
+
+.personal{
+    margin: 2rem;
+    font-size: 4rem;
+}
+
+footer{
+    font-size: 2rem;
 }
