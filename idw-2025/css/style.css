@@ -16,11 +16,20 @@ header{
 }
 
 main{
+    background-image: url(../img/5d918631669e-AdobeStock_833477820-1-1-.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     display: grid;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .logos{
     display: flex;
@@ -48,7 +57,7 @@ main{
     font-size: 2rem;
     height: 3rem;
     padding: 0 1rem;
-    color: rgb(39, 11, 139);
+    color: rgb(0, 0, 1);
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -72,6 +81,8 @@ main{
     flex-direction: column;
     font-size: 4rem;
     text-justify: center;
+    justify-content: center;
+    align-items: center;
     margin: 4rem;
     max-width: 90rem;
     background-color: rgb(215, 242, 255);
@@ -92,8 +103,11 @@ main{
     border-radius: 10px;
     padding: 1rem;
     text-justify: center;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(215, 242, 255);
     font-size: 3rem;
+    max-width: 40rem;
 }
 
 .personal{
@@ -112,18 +126,45 @@ footer {
     text-align: center;
 }
 
+/* lista desplegable */
+.titulolista{
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.881);
+  background-color: hsla(0, 0%, 98%, 0.418);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.listaObras{
+  background-color: hsla(0, 0%, 98%, 0.418);
+  list-style-type: circle;
+  font-size: 4rem;
+  margin: 4rem; 
+}
+
+
 /* CONTACTO */
 
 .contacto_titulo {
   color: rgb(39, 11, 139);
-  font-size: 3rem;
+  font-size: 6rem;
+  background-color: hsla(0, 0%, 98%, 0.418);
+  padding: 1rem;
+  border-radius: 5px;
+  max-width: 35rem;
 }
+
+
 .contacto {
   padding: 6rem 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .contacto-img {
   background-image: url(../img/area-de-clinica.webp);
-  height: 30rem;
+  height: 10rem;
   width: 60rem;
   background-size: cover;
   margin-top: 7rem;
@@ -177,6 +218,9 @@ footer {
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
+    background-color: hsla(0, 0%, 98%, 0.418);
+    margin: 2rem 10rem;
+    padding: 1rem;
 }
 .redes h3{
     font-size: 1.8rem;
