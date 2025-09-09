@@ -68,6 +68,10 @@ main{
     color: bisque; 
     border-radius: 5px;
 }
+.actual{
+  background-color:rgb(19, 105, 161) ;
+    border-radius: 5px;
+}
 
 
 main{
