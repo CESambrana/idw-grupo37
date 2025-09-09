@@ -1,0 +1,45 @@
+.inicioB{
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    text-justify: center;
+    margin: 4rem;
+    max-width: 90rem;
+    background-color: rgb(215, 242, 255);
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.novedades{
+   display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    text-justify: center;
+    margin: 4rem;
+    max-width: 90rem;
+    background-color: rgb(215, 242, 255);
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 1rem; 
+}
+
+.novedades ul{
+    font-size: 2.2rem;
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+.text1{
+    font-size: 4rem;
+}
+
+.botonSecundario{
+    font-size: 2rem;
+    height: 3rem;
+    padding: 0 1rem;
+    color: rgb(39, 11, 139);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
