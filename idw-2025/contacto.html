@@ -6,70 +6,90 @@
     <title>Clínica</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
 <body>
-     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="logoClinica.png" alt="logo">
-     </a>
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="header container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img class="logo" src="logoClinica.png" alt="logo">
+        </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="institucional.html">Institucional</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="especialidadesmedicas.html">Especialidades medicas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="obrassociales.html">Obras sociales</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="catalogoprofesionales.html">Nuestros profesionales</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="contacto.html" >Contacto</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">BUSCAR</button>
-      </form>
-    </div>
-  </div>
-</nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=" navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="botonesPrincipales navbar-nav me-auto mb-2 mb-lg-0">
+            <li class=" nav-item">
+              <a class=" nav-link" aria-current="page" href="institucional.html">Institucional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="especialidadesmedicas.html">Especialidades médicas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="obrassociales.html">Obras sociales</a>
+            </li>
 
-   <main>
-    <section class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
-        <form class="row g-3 shadow p-4 rounded bg-white">
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div>
-          <div class="col-12">
-            <label for="inputAddress" class="form-label">Dirección</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Calle 1234">
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
-          </div>
-        </form>
+            <li class="nav-item">
+              <a class=" nav-link" href="catalogoprofesionales.html" >Nuestros profesionales</a>
+            </li>
+            <li class="nav-item">
+              <a class="actual nav-link" href="contacto.html" >Contacto</a>
+            </li>
+
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="" aria-label="Search"/>
+            <button class="btn btn-outline-success" type="submit">BUSCAR</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
-  </main>
-   
-    <footer>
-        <p>IDW S.A &copy; 2025. Todos los derechos reservados.</p>
-    </footer>
+  </nav>
+
+  <main class="contacto">
+      <div class="contenedor">     
+          <h2 class="contacto_titulo">Contacto</h2>
+
+          <div class="contacto-img"></div>
+
+          <form class="formulario">
+            <div class="campo">
+              <label class="campo_label" for="nombre">Nombre</label>
+              <input
+                class="campo_input"
+                type="text"
+                placeholder="Tu Nombre"
+                id="nombre"
+              />
+            </div>
+
+            <div class="campo">
+              <label class="campo_label" for="email">E-mail</label>
+              <input
+                class="campo_input"
+                type="email"
+                placeholder="Tu E-mail"
+                id="email"
+              />
+            </div>
+
+            <div class="campo">
+              <label class="campo_label" for="mensaje">Mensaje</label>
+              <textarea class="campo_input campo_textarea" id="mensaje"></textarea>
+            </div>
+
+            <div class="campo">
+              <input type="submit" value="Enviar" class="boton" />
+            </div>
+          </form>
+
+          <div class="redes">
+            <h3>O comunicate a...</h3>
+            <p><span>Emma:</span> 3454999794</p>
+            <p><span>Brian:</span> 3454979992</p>
+            <p><span>Mica:</span> 3454995997</p>
+          </div>
+      </div>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
