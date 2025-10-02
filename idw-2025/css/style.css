@@ -6,13 +6,30 @@
   font-size: 62.5%;
 }
 
-header{
-    width: 100%;
-    height: 25rem;
-    padding: 4rem 0;
-    background-color: rgb(17, 149, 226);
-    display: flex;
-    flex-direction: column;
+
+.navbar{
+  min-height: 100px;
+}
+
+.navbar-nav .nav-link{
+  font-size: 20px;
+}
+
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+}
+
+.form-control{
+  height: 30px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.btn {
+  height: 30px;
+  width: 150px;
+  border-radius: 50%;
 }
 
 main{
@@ -25,22 +42,18 @@ main{
     align-items: center;
     text-align: center;
 }
+
 .contenedor{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.logos{
-    display: flex;
-    gap: 4rem;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
+
+
 .logos h1 a{
     text-decoration: none;
-    font-size: 5rem;
+    font-size: 5rem;    
     color: rgb(39, 11, 139);
 }
 .logos a img{
@@ -147,92 +160,6 @@ footer {
 }
 
 
-/* CONTACTO */
-
-.contacto_titulo {
-  color: rgb(39, 11, 139);
-  font-size: 6rem;
-  background-color: hsla(0, 0%, 98%, 0.418);
-  padding: 1rem;
-  border-radius: 5px;
-  max-width: 35rem;
-}
 
 
-.contacto {
-  padding: 6rem 0 ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.contacto-img {
-  background-image: url(../img/area-de-clinica.webp);
-  height: 10rem;
-  width: 60rem;
-  background-size: cover;
-  margin-top: 7rem;
-}
-
-.formulario {
-  background-color: hsla(0, 0%, 98%, 0.925);
-  margin: -10rem auto 0 auto;
-  padding: 5rem;
-  width: 80%;
-}
-
-.campo {
-  display: flex;
-  margin-bottom: 2rem;
-  
-}
-.campo_label {
-  flex: 0 0 9rem;
-  padding-right: 2rem;
-  font-size: 1.6rem;
-  text-align: c;
-}
-
-
-.campo_input {
-  flex: 1;
-  border: 1px solid rgb(197, 197, 197);
-  font-size: 1.3rem;
-}
-.campo_textarea {
-  height: 10rem;
-}
-
-.boton {
-  margin-top: 4rem;
-  background-color: rgb(43, 43, 204);
-  padding: 0.5rem 3rem;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 700;
-  border: none;
-}
-
-.boton:hover {
-  color: wheat;
-  cursor: pointer;
-}
-
-.redes {
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    background-color: hsla(0, 0%, 98%, 0.418);
-    margin: 2rem 10rem;
-    padding: 1rem;
-}
-.redes h3{
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    color: rgb(39, 11, 139);
-}
-.redes span, p{
-    font-size: 1.5rem;
-}
-
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
