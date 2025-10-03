@@ -1,71 +1,74 @@
-.inicioB{
-    display: flex;
-    flex-direction: column;
-    font-size: 4rem;
-    text-justify: center;
-    margin: 4rem;
-    max-width: 90rem;
-    background-color: rgb(215, 242, 255);
-    gap: 1rem;
-    border-radius: 10px;
-    padding: 1rem;
+.inicioB {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  text-justify: center;
+  margin: 4rem;
+  max-width: 90rem;
+  background-color: rgb(215, 242, 255);
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
-.novedades{
-    display: flex;
-    flex-direction: column;
-    font-size: 4rem;
-    align-items: center;
-    margin: 4rem;
-    max-width: 90rem;
-    background-color: rgb(215, 242, 255);
-    gap: 1rem;
-    border-radius: 10px;
-    padding: 1rem; 
+.novedades {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  align-items: center;
+  margin: 4rem;
+  max-width: 90rem;
+  background-color: rgb(215, 242, 255);
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
+.novedades_fotos {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 2rem;
+  font-size: 2.2rem;
+  flex-wrap: wrap;
+}
+.novedades_card img {
+  max-width: 100%;
+  height: auto;
+}
+.novedades_card {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+}
+.novedades_card img {
+  width: 20rem;
+}
 
-.novedades_fotos{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    gap: 2rem;
-    font-size: 2.2rem;
-}
-.novedades_card{
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: space-between;
-    background-color: white;
-    padding: 2rem;
-}
-.novedades_card img{
-    width: 20rem;
-
+.text1 {
+  font-size: 4rem;
 }
 
-.text1{
-    font-size: 4rem;
-}
+.botonSecundario {
+  font-size: 2rem;
+  height: 3rem;
+  padding: 0 1rem;
 
-.botonSecundario{
-    font-size: 2rem;
-    height: 3rem;
-    padding: 0 1rem;
-
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    margin-bottom: 3rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 3rem;
 }
-.botonSecundario a{
-    padding: 1rem;
-    background-color: rgb(61, 61, 199);
-    text-decoration: none;
-    color: aliceblue;
+.botonSecundario a {
+  padding: 1rem;
+  background-color: rgb(61, 61, 199);
+  text-decoration: none;
+  color: aliceblue;
 }
-.botonSecundario a:hover{
-    color: wheat;
+.botonSecundario a:hover {
+  color: wheat;
 }
