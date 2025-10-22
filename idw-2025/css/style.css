@@ -118,7 +118,7 @@ main{
 main{
     font-size: 2rem;
     background-color: antiquewhite;
-    min-height: 70rem;
+    min-height: 50rem;
 }
 
 .infoIdwsa {
@@ -175,21 +175,27 @@ footer p {
 }
 
 /* lista desplegable */
+.especialistas{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20rem;
+}
+
 .titulolista{
-  font-size: 50px;
+  font-size: 1.8rem;
   color: rgba(0, 0, 0, 0.881);
   background-color: hsla(0, 0%, 98%, 0.418);
   padding: 1rem;
   border-radius: 10px;
 }
 
+
 .listaObras{
   background-color: hsla(0, 0%, 98%, 0.418);
   list-style-type: circle;
-  font-size: 4rem;
-  margin: 4rem; 
+  font-size: 2rem;
+  margin: 2rem; 
 }
-
 
 
 /* Contacto */
@@ -278,4 +284,34 @@ footer p {
 .redes span, p{
     font-size: 1.5rem;
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+
+@media (min-width:768px){
+  .titulolista{
+  font-size: 3rem;
+}
+.listaObras{
+  font-size: 3rem;
+}
+.especialistas{
+  margin-bottom: 25rem;
+}
+main{
+    min-height: 70rem;
+}
+}
+
+@media (min-width:1024px){
+  .titulolista{
+  font-size: 4rem;
+}
+.listaObras{
+  font-size: 4rem;
+}
+.especialistas{
+  margin-bottom: 15rem;
+}
+main{
+    min-height: 70rem;
+}
+}
