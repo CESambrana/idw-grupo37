@@ -1,80 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="header container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img class="logo" src="logoClinica.png" alt="logo">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class=" navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="botonesPrincipales navbar-nav me-auto mb-2 mb-lg-0">
-            <li class=" nav-item">
-              <a class="actual nav-link" aria-current="page" href="institucional.html">Institucional</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="especialidadesmedicas.html">Especialidades médicas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="obrassociales.html">Obras sociales</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="catalogoprofesionales.html" >Nuestros profesionales</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html" >Contacto</a>
-            </li>
-
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">BUSCAR</button>
-          </form>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="header container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo" src="logoClinica.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="botonesPrincipales navbar-nav me-auto mb-2 mb-lg-0">
+          <li class=" nav-item">
+            <a class=" nav-link" aria-current="page" href="institucional.html">Institucional</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="especialidadesmedicas.html">Especialidades médicas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="obrassociales.html">Obras sociales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalogoprofesionales.html">Nuestros profesionales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+        <form class="d-flex align-items-center gap-2" role="search">
+          <input class="form-control buscador-input" type="search" placeholder="Buscar en la clínica..."
+            aria-label="Buscar" />
+          <button class="btn btn-light buscador-btn" type="submit">Buscar</button>
+        </form>
       </div>
+    </div>
   </nav>
-    <main>
-        <div class="contenedor">        
-            <div class="infoIdwsa">
-                <h2>Quienes somos</h2>
-                <p class="infoIdwsaP">Somos una clínica dedicada a brindar servicios de salud de alta calidad, con un enfoque humano y personalizado. Nuestro objetivo es mejorar la salud y calidad de vida de nuestros pacientes a través de una atención integral y accesible. Estamos comprometidos con la excelencia médica y la innovación, ofreciendo diagnósticos precisos y tratamientos efectivos para toda la comunidad.
-                </p>
-            </div>
-            <section class="infoPersonal">
-
-                <h2>Personal de IDW S.A</h2>
-
-                <div class="personal">
-                    <ul>
-                        <li><strong>DIRECTOR MÉDICO:</strong> Dr. Alejandro Torres</li>
-                        <li><strong>DIRECTOR MÉDICO ASOCIADO:</strong> Dra. Sofía Castillo</li>
-                        <li><strong>GUARDIA DE URGENCIAS:</strong> Dr. Daniel Morales</li>
-                        <li><strong>PEDIATRÍA:</strong> Dra. Valentina Ocampo</li>
-                        <li><strong>CARDIOLOGÍA:</strong> Dra. Gabriela Ramos</li>
-                        <li><strong>TERAPIA INTENSIVA ADULTOS:</strong> Dr. Nicolás Herrera</li>
-                        <li><strong>TERAPIA INTENSIVA PEDIÁTRICA:</strong> Dr. Javier Cruz</li>
-                        <li><strong>LABORATORIO DE ANÁLISIS MÉDICOS:</strong> Dra. Emilia Mendoza</li>
-                        <li><strong>TOMOGRAFÍA:</strong> Dr. Felipe Ríos</li>
-                        <li><strong>MAMOGRAFÍA:</strong> Dra. Emilia Mendoza</li>
-                        <li><strong>ECOGRAFÍA:</strong> Dra. Carolina Navarro</li>
-                        <li><strong>RESONANCIA MAGNÉTICA:</strong> Dr. Ricardo Soto</li>
-                    </ul>
-            </div>
+  <main>
+    <div class="contenedor">
+      <div class="infoIdwsa">
+        <h2>Quienes somos</h2>
+        <p class="infoIdwsaP">Somos una clínica dedicada a brindar servicios de salud de alta calidad, con un enfoque
+          humano y personalizado. Nuestro objetivo es mejorar la salud y calidad de vida de nuestros pacientes a través
+          de una atención integral y accesible. Estamos comprometidos con la excelencia médica y la innovación,
+          ofreciendo diagnósticos precisos y tratamientos efectivos para toda la comunidad.
+        </p>
+      </div>
+      <section class="infoPersonal">
+        <h2>Personal de IDW S.A</h2>
+        <div class="personal">
+          <ul class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <li class="col"><strong>DIRECTOR MÉDICO:</strong> Dr. Alejandro Torres</li>
+            <li class="col"><strong>DIRECTOR MÉDICO ASOCIADO:</strong> Dra. Sofía Castillo</li>
+            <li class="col"><strong>GUARDIA DE URGENCIAS:</strong> Dr. Daniel Morales</li>
+            <li class="col"><strong>PEDIATRÍA:</strong> Dra. Valentina Ocampo</li>
+            <li class="col"><strong>CARDIOLOGÍA:</strong> Dra. Gabriela Ramos</li>
+            <li class="col"><strong>TERAPIA INTENSIVA ADULTOS:</strong> Dr. Nicolás Herrera</li>
+            <li class="col"><strong>TERAPIA INTENSIVA PEDIÁTRICA:</strong> Dr. Javier Cruz</li>
+            <li class="col"><strong>LABORATORIO DE ANÁLISIS MÉDICOS:</strong> Dra. Emilia Mendoza</li>
+            <li class="col"><strong>TOMOGRAFÍA:</strong> Dr. Felipe Ríos</li>
+            <li class="col"><strong>MAMOGRAFÍA:</strong> Dra. Emilia Mendoza</li>
+            <li class="col"><strong>ECOGRAFÍA:</strong> Dra. Carolina Navarro</li>
+            <li class="col"><strong>RESONANCIA MAGNÉTICA:</strong> Dr. Ricardo Soto</li>
+          </ul>
         </div>
-    </main>
-    <footer>
-        <p>IDW S.A &copy; 2025. Todos los derechos reservados.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>IDW S.A &copy; 2025. Todos los derechos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
