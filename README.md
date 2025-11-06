@@ -6,5 +6,5 @@
 # Sergio Valdiviezo
 # Joel Agustin Beceiro
 
-# Usuario: admin
-# Contraseña: 12345
+# Usuario: emilys
+# Contraseña: emilyspass
