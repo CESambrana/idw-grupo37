@@ -1,0 +1,94 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Usuarios - Panel de Administración</title>  
+  <link rel="stylesheet" href="style.css">  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">  
+</head>  
+<body>  
+  
+  <!-- SCRIPT DE PROTECCIÓN -->  
+  <script>  
+    if (!sessionStorage.getItem("accessToken")) {  
+      alert("Debes iniciar sesión primero");  
+      window.location.href = "index.html";  
+    }  
+  </script>  
+  
+  <!-- NAVBAR -->  
+  <nav class="navbar navbar-dark" style="background-color: rgba(118, 158, 158, 0.815);">  
+    <div class="container-fluid">  
+      <a class="navbar-brand d-flex align-items-center" href="admin.html">  
+        <img src="logoClinica.png" alt="Logo" height="60" class="me-2">  
+        <span>Panel de Administración - Usuarios</span>  
+      </a>  
+      <div>  
+        <a href="admin.html" class="btn btn-light me-2">Volver a Médicos</a>  
+        <button class="btn btn-light" onclick="cerrarSesion()">Cerrar sesión</button>  
+      </div>  
+    </div>  
+  </nav>  
+  
+  <main class="container my-4">  
+    <h2 class="mb-4">Usuarios Registrados en DummyJSON</h2>  
+    <div id="usuarios-container" class="row"></div>  
+  </main>  
+  
+  <footer class="text-center p-3">  
+    <p>© 2025 Clínica Médica — Panel de Administración</p>  
+  </footer>  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>  
+  <script>  
+    function cerrarSesion() {  
+      sessionStorage.removeItem("accessToken");  
+      sessionStorage.removeItem("userId");  
+      sessionStorage.removeItem("username");  
+      window.location.href = "index.html";  
+    }  
+  
+    async function cargarUsuarios() {  
+      try {  
+        const response = await fetch('https://dummyjson.com/users');  
+        const data = await response.json();  
+          
+        const container = document.getElementById('usuarios-container');  
+        container.innerHTML = '<p class="text-muted">Cargando usuarios...</p>';  
+          
+        container.innerHTML = '';  
+          
+        data.users.forEach(user => {  
+          const col = document.createElement('div');  
+          col.className = 'col-md-6 col-lg-4 mb-4';  
+            
+          col.innerHTML = `  
+            <div class="card shadow-sm h-100">  
+              <div class="card-body">  
+                <h5 class="card-title">${user.firstName} ${user.lastName}</h5>  
+                <p class="card-text">  
+                  <strong>Username:</strong> ${user.username}<br>  
+                  <strong>Email:</strong> ${user.email}<br>  
+                  <strong>Edad:</strong> ${user.age} años<br>  
+                  <strong>Género:</strong> ${user.gender}<br>  
+                  <strong>Teléfono:</strong> ${user.phone}  
+                </p>  
+              </div>  
+            </div>  
+          `;  
+            
+          container.appendChild(col);  
+        });  
+      } catch (error) {  
+        console.error("Error cargando usuarios:", error);  
+        document.getElementById('usuarios-container').innerHTML =   
+          '<p class="text-danger">Error al cargar los usuarios. Por favor, intenta de nuevo.</p>';  
+      }  
+    }  
+  
+    // Cargar usuarios al cargar la página  
+    document.addEventListener('DOMContentLoaded', cargarUsuarios);  
+  </script>  
+</body>  
+</html>

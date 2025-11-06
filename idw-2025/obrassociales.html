@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obras Sociales</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="logoClinica.png" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="obrassociales.html">Obras Sociales</a></li>
+          <li class="nav-item"><a class="nav-link" href="profesionales.html">Profesionales</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO OBRAS SOCIALES -->
+  <main class="container my-5">
+    <h2 class="text-center mb-4">OBRAS SOCIALES</h2>
+    <div class="row" id="grid-obras"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="redes-sociales">
+      <a href="#" class="telefono"><i class="bi bi-telephone-fill"></i></a>
+      <a href="#" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <p>© 2025 CLINICA MEDICAL</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>    
+  function getObrasSociales() {    
+    const data = localStorage.getItem('obrasSocialesData');    
+    return data ? JSON.parse(data) : [    
+      { id: '1', nombre: "Osde", img: "img/osde.jpg", porcentaje: 30 },    
+      { id: '2', nombre: "Sancor Salud", img: "img/sancor-salud-portada.jpg", porcentaje: 25 },    
+      { id: '3', nombre: "Galeno", img: "img/galeno.png", porcentaje: 20 },    
+      { id: '4', nombre: "Medifé", img: "img/medife.png", porcentaje: 15 },    
+      { id: '5', nombre: "Swiis Medical", img: "img/LOGO-Swiss-Medical-Medicina-Privada-3.jpg", porcentaje: 35 },    
+      { id: '6', nombre: "Oser", img: "img/oser.jpg", porcentaje: 10 }    
+    ];    
+  }    
+    
+  const obrasSociales = getObrasSociales();    
+  const grid = document.getElementById("grid-obras");    
+    
+  obrasSociales.forEach(obra => {    
+    const col = document.createElement("div");    
+    col.className = "col-6 col-md-4 col-lg-3 mb-4";  
+    col.innerHTML = `  
+      <div class="obra">  
+        <img src="${obra.img}" alt="${obra.nombre}">  
+        <p>${obra.nombre}</p>  
+        <p class="text-success fw-bold">${obra.porcentaje}% de descuento</p>  
+      </div>  
+    `;  
+    grid.appendChild(col);  
+  });  
+</script>
+</body>
+</html>

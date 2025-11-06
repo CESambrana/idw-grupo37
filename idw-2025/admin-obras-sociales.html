@@ -1,0 +1,72 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Administrar Obras Sociales</title>  
+  <link rel="stylesheet" href="style.css">  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">  
+</head>  
+<body>  
+  
+  <!-- SCRIPT DE PROTECCIÓN -->  
+  <script>  
+    if (!sessionStorage.getItem("accessToken")) {  
+      alert("Debes iniciar sesión primero");  
+      window.location.href = "index.html";  
+    }  
+  </script>  
+  
+  <!-- NAVBAR -->  
+  <nav class="navbar navbar-dark" style="background-color: rgba(118, 158, 158, 0.815);">  
+    <div class="container-fluid">  
+      <a class="navbar-brand d-flex align-items-center" href="admin.html">  
+        <img src="logoClinica.png" alt="Logo" height="60" class="me-2">  
+        <span>Panel de Administración - Obras Sociales</span>  
+      </a>  
+      <div>  
+        <a href="admin.html" class="btn btn-light me-2">Volver a Médicos</a>  
+        <a href="usuarios.html" class="btn btn-light me-2">Ver Usuarios</a>  
+        <button class="btn btn-light" onclick="cerrarSesion()">Cerrar sesión</button>  
+      </div>  
+    </div>  
+  </nav>  
+  
+  <main class="container my-4">  
+    <!-- FORMULARIO PARA AGREGAR/EDITAR OBRA SOCIAL -->  
+    <section class="mb-5">  
+      <h3>Agregar/Editar Obra Social</h3>  
+      <form id="obra-social-form" class="row g-3">  
+        <div class="col-md-4">  
+          <label for="nombre-input" class="form-label">Nombre</label>  
+          <input type="text" class="form-control" id="nombre-input" required>  
+        </div>  
+        <div class="col-md-4">  
+          <label for="porcentaje-input" class="form-label">Porcentaje de Descuento (%)</label>  
+          <input type="number" class="form-control" id="porcentaje-input" min="0" max="100" required>  
+        </div>  
+        <div class="col-md-4">  
+          <label for="image-url-input" class="form-label">URL de Imagen</label>  
+          <input type="url" class="form-control" id="image-url-input" required>  
+        </div>  
+        <div class="col-12">  
+          <button type="submit" class="btn btn-primary">Agregar Obra Social</button>  
+        </div>  
+      </form>  
+    </section>  
+  
+    <!-- LISTA DE OBRAS SOCIALES -->  
+    <section>  
+      <h3>Obras Sociales Registradas</h3>  
+      <div id="obras-sociales-container" class="row"></div>  
+    </section>  
+  </main>  
+  
+  <footer class="text-center p-3">  
+    <p>© 2025 Clínica Médica — Panel de Administración</p>  
+  </footer>  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>  
+  <script src="js/admin-obras-sociales.js"></script>  
+</body>  
+</html>

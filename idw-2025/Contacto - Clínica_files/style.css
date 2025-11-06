@@ -1,0 +1,151 @@
+html, body {
+    height: 100%;      /* hace que el body ocupe toda la ventana */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* mínimo 100% de la altura de la ventana */
+}
+
+.navbar {
+    background-color: rgba(118, 158, 158, 0.815);
+    min-height: 100px; /* altura fija del navbar */
+    display: flex;
+    align-items: center; /* centra verticalmente todo el contenido */
+    padding: 0 20px;
+}
+
+.navbar-brand img {
+    height: 60px; /* mantiene el logo a 60px */
+    width: auto;
+}
+
+.navbar form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto; /* empuja el form a la derecha */
+}
+
+.buscador-input {
+    height: 40px; /* un poco más pequeño que los links para no deformar */
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid #1369a1;
+}
+
+.buscador-btn {
+    height: 40px; /* igual que input */
+    font-size: 16px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: none;
+  
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buscador-btn:hover {
+    background-color: #1976d2;
+}
+
+
+main {
+    flex: 1;                /* ocupa todo el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: flex-start;
+    padding-top: 120px;     /* espacio del header */
+    padding-bottom: 20px;
+}
+
+
+
+#carouselExample {
+    width: 80%;               /* ancho del carousel: ajustable */
+    max-width: 1200px;        /* opcional: ancho máximo */
+    height: 500px;            /* alto fijo */
+}
+
+#carouselExample .carousel-inner img {
+    width: 100%;
+    height: 100%;             /* para ocupar todo el alto del carousel */
+    object-fit: cover;        /* recorta la imagen si es necesario */
+    display: block;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(118, 158, 158, 0.815);
+    padding: 20px 0;
+    border-top: 1px solid #fff;
+}
+
+footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+footer .redes-sociales a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    color: blanchedalmond;
+    margin: 20px;
+    text-align: center;
+    border-radius: 100px;
+    transition: 0.3s ease all;
+}
+
+footer .redes-sociales .whatsapp {
+    background-color: #2fb953;
+}
+
+footer .redes-sociales .telefono {
+    background-color: #c13584;
+}
+
+footer .redes-sociales a i {
+    font-size: 30px;
+    line-height: 60px;
+}
+
+footer .contenedor-icono:hover a {
+    animation: icono 0.5s ease;
+}
+
+@keyframes icono {
+    from {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    to {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+
+/* ==== Responsividad ==== */
+@media screen and (max-width: 700px) {
+    .grid .item {
+        width: calc(50% - 20px);
+    }
+
+    header .busqueda {
+        width: 90%;
+    }
+
+    header .categorias a {
+        font-size: 18px;
+        margin: 8px 12px;
+    }
+}

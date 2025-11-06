@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <body>  
+  <!-- SCRIPT DE PROTECCIÓN - AGREGAR AQUÍ -->  
+  <script>  
+    // Verificar autenticación antes de cargar la página  
+    if (!sessionStorage.getItem("accessToken")) {  
+      alert("Debes iniciar sesión primero");  
+      window.location.href = "index.html";  
+    }  
+  </script>  
+  <div>  
+  <a href="admin-obras-sociales.html" class="btn btn-light me-2">Obras Sociales</a>  
+  <a href="usuarios.html" class="btn btn-light me-2">Ver Usuarios</a>  
+  <button class="btn btn-light" onclick="cerrarSesion()">Cerrar sesión</button>  
+</div>
+  <!-- NAVBAR -->  
+  <nav class="navbar navbar-dark" style="background-color: rgba(118, 158, 158, 0.815);">  
+  ...
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark" style="background-color: rgba(118, 158, 158, 0.815);">
+    <div class="container-fluid">
+      <!-- Logo e inicio -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logoClinica.png" alt="Logo" height="60" class="me-2">
+        <span>Panel de Administración</span>
+      </a>
+<div>  
+  <a href="usuarios.html" class="btn btn-light me-2">Ver Usuarios</a>  
+  <button class="btn btn-light" onclick="cerrarSesion()">Cerrar sesión</button>  
+</div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+
+    <!-- FORMULARIO PARA AGREGAR MÉDICOS -->
+    <div class="card shadow">
+      <div class="card-header text-white" style="background-color: rgba(118, 158, 158, 0.815);">
+        <h3>Agregar nuevo médico</h3>
+      </div>
+      <div class="card-body">
+        <form id="doctor-form" class="row g-3">
+          <div class="col-md-4">
+            <input type="text" id="name-input" class="form-control" placeholder="Nombre del médico" required>
+          </div>
+          <div class="col-md-4">
+            <input type="text" id="especialidad-input" class="form-control" placeholder="Especialidad" required>
+          </div>
+          <div class="col-md-4">
+            <input type="text" id="image-url-input" class="form-control" placeholder="URL de imagen" required>
+          </div>
+          <div class="col-12 text-end mt-3">
+            <button type="submit" class="btn btn-primary btnForm">Agregar Médico</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- LISTADO DE MÉDICOS -->
+    <section class="container my-5">
+      <h3>Listado de Médicos</h3>
+      <div id="doctors-list-container" class="d-flex flex-wrap gap-3"></div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center p-3">
+    <p>© 2025 Clínica Médica — Panel de Administración</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+function cerrarSesion() {  
+  sessionStorage.removeItem("accessToken");  
+  sessionStorage.removeItem("userId");  
+  sessionStorage.removeItem("username");  
+  window.location.href = "index.html";  
+}
+  </script>
+
+</body>
+</html>
