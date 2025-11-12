@@ -1,42 +1,52 @@
-const datos = {
-    name: "",
-    especialidad: "",
-    imageUrl: ""
-};
 
-const formulario = document.querySelector("#doctor-form");
+document.addEventListener("DOMContentLoaded", function() {
 
-formulario.addEventListener("input", (e) => {
-    datos[e.target.id] = e.target.value;
-});
+    const formulario = document.querySelector("#contacto-form");
+    const nombreInput = document.querySelector("#nombre");
+    const apellidoInput = document.querySelector("#apellido");
+    const emailInput = document.querySelector("#email");
+    const mensajeInput = document.querySelector("#mensaje");
+    const mensajeDiv = document.querySelector("#form-mensaje"); 
 
-formulario.addEventListener("submit", function (e) {
-    e.preventDefault();
+    formulario.addEventListener("submit", function(e) {
+        e.preventDefault(); 
 
-    const name = document.getElementById('name-input').value.trim();
-    const especialidad = document.getElementById('especialidad-input').value.trim();
-    const imageUrl = document.getElementById('image-url-input').value.trim();
+       
+        const nombre = nombreInput.value.trim();
+        const apellido = apellidoInput.value.trim();
+        const email = emailInput.value.trim();
+        const mensaje = mensajeInput.value.trim();
 
-    if (name === "" || especialidad === "" || imageUrl === "") {
-        mostrarError("Todos los campos son obligatorios");
-        return;
+        if (nombre === "" || apellido === "" || email === "" || mensaje === "") {
+          
+            mostrarMensaje("Todos los campos son obligatorios.", "danger");
+            return; 
+        }
+
+        console.log("Datos del formulario:", { nombre, apellido, email, mensaje });
+
+        mostrarMensaje("¡Mensaje enviado con éxito! Nos contactaremos a la brevedad.", "success");
+        
+        formulario.reset();
+    });
+
+    function mostrarMensaje(mensaje, tipo) {
+       
+        mensajeDiv.innerHTML = "";
+
+        
+        const alerta = document.createElement("div");
+        alerta.classList.add("alert", `alert-${tipo}`, "mt-3");
+        alerta.setAttribute("role", "alert");
+        alerta.textContent = mensaje;
+
+        
+        mensajeDiv.appendChild(alerta);
+
+        
+        setTimeout(() => {
+            alerta.remove();
+        }, 4000);
     }
-
-    const newDoctorData = { name, especialidad, imageUrl };
-    addDoctor(newDoctorData); // función definida en admin.js
-
-    formulario.reset();
-    displayDoctor(); // 🔥 actualiza la lista sin recargar
 });
-
-function mostrarError(mensaje) {
-    const error = document.createElement("p");
-    error.textContent = mensaje;
-    error.classList.add("text-danger", "mt-2");
-    formulario.appendChild(error);
-
-    setTimeout(() => {
-        error.remove();
-    }, 3000);
-}
 

@@ -4,19 +4,31 @@ const STORAGE_KEY = 'doctorData';
 const inicialDoctor = [
   { 
     id: '1700000000001', 
-    name: 'Dra. Micaela Caravajal', 
+    name: 'Micaela Caravajal', 
     especialidad: 'Neurología', 
-    imageUrl: "https://elmundodemozart.com/wp-content/uploads/2024/12/pediatra-en-guarderia.webp" 
+    imageUrl: "./img/dr.micaelacaravajal.jpg" 
   },
   { 
     id: '1700000000002', 
-    name: 'Dra. Maria L. Flamarique', 
+    name: 'Maria L. Flamarique', 
     especialidad: 'Ginecología', 
-    imageUrl: "https://elmundodemozart.com/wp-content/uploads/2024/12/pediatra-en-guarderia.webp" 
+    imageUrl: "./img/Dra.Maria-Laura-Flamarique-.jpg" 
+  },
+  { 
+    id: '1700000000003', 
+    name: 'Julio Gómez', 
+    especialidad: 'Cardiología', 
+    imageUrl: "./img/drgomezjulio.jpg"
+  },
+  { 
+    id: '1700000000004', 
+    name: 'Ana Gómez', 
+    especialidad: 'Dermatología', 
+    imageUrl: "./img/drpalmero.jpeg"
   }
 ];
 
-// Inicializa localStorage si está vacío
+
 function inicializarLocalStorage() {
   if (!localStorage.getItem(STORAGE_KEY)) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(inicialDoctor));
@@ -24,7 +36,6 @@ function inicializarLocalStorage() {
   }
 }
 
-// Obtener y guardar
 function getDoctor() {
   const data = localStorage.getItem(STORAGE_KEY);
   return data ? JSON.parse(data) : [];
@@ -34,7 +45,6 @@ function guardarDoctor(doctorArray) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(doctorArray));
 }
 
-// Agregar nuevo médico
 function addDoctor(doctorData) {
   const doctor = getDoctor();
   const newId = Date.now().toString();
@@ -44,7 +54,6 @@ function addDoctor(doctorData) {
   console.log("Nuevo médico agregado:", newDoctor);
 }
 
-// Eliminar médico
 function removeDoctor(id) {
   if (confirm("¿Estás seguro de que quieres eliminar a este médico?")) {
     let doctor = getDoctor();
@@ -53,35 +62,33 @@ function removeDoctor(id) {
     displayDoctor();
   }
 }
-// Variable global para saber si estamos editando  
+ 
 let editingDoctorId = null;  
   
-// Función para editar médico  
 function editDoctor(id) {  
   const doctors = getDoctor();  
   const doctor = doctors.find(d => d.id === id);  
     
   if (doctor) {  
-    // Rellenar el formulario con los datos actuales  
+     
     document.getElementById('name-input').value = doctor.name;  
     document.getElementById('especialidad-input').value = doctor.especialidad;  
     document.getElementById('image-url-input').value = doctor.imageUrl;  
       
-    // Guardar el ID del médico que estamos editando  
+      
     editingDoctorId = id;  
       
-    // Cambiar el texto del botón  
+    
     const submitBtn = document.querySelector('#doctor-form button[type="submit"]');  
     submitBtn.textContent = 'Actualizar Médico';  
     submitBtn.classList.remove('btn-primary');  
     submitBtn.classList.add('btn-warning');  
       
-    // Scroll al formulario  
+    
     document.getElementById('doctor-form').scrollIntoView({ behavior: 'smooth' });  
   }  
 }  
-  
-// Función para actualizar médico  
+   
 function updateDoctor(id, doctorData) {  
   let doctors = getDoctor();  
   const index = doctors.findIndex(d => d.id === id);  
@@ -93,7 +100,7 @@ function updateDoctor(id, doctorData) {
     console.log("Médico actualizado:", doctors[index]);  
   }  
 }
-// Mostrar todos los médicos
+
 function displayDoctor() {
   const doctor = getDoctor();
   const container = document.getElementById('doctors-list-container');
@@ -122,7 +129,7 @@ function displayDoctor() {
   });
 }
 
-// Escucha el envío del formulario
+
 document.addEventListener('DOMContentLoaded', () => {
   inicializarLocalStorage();
   displayDoctor();
@@ -134,22 +141,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const newDoctorData = {  
       name: document.getElementById('name-input').value.trim(),  
       especialidad: document.getElementById('especialidad-input').value.trim(),  
-      imageUrl: document.getElementById('image-url-input').value.trim() || "https://elmundodemozart.com/wp-content/uploads/2024/12/pediatra-en-guarderia.webp"  
+      imageUrl: document.getElementById('image-url-input').value.trim()  
     };  
 
     if (newDoctorData.name && newDoctorData.especialidad) {  
       if (editingDoctorId) {  
-        // Estamos editando  
+        
         updateDoctor(editingDoctorId, newDoctorData);  
         editingDoctorId = null;  
           
-        // Restaurar el botón  
+        
         const submitBtn = form.querySelector('button[type="submit"]');  
         submitBtn.textContent = 'Agregar Médico';  
         submitBtn.classList.remove('btn-warning');  
         submitBtn.classList.add('btn-primary');  
       } else {  
-        // Estamos agregando  
+        
         addDoctor(newDoctorData);  
       }  
         

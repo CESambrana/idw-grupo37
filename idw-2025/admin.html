@@ -9,9 +9,9 @@
 </head>
 <body>
   <body>  
-  <!-- SCRIPT DE PROTECCIÓN - AGREGAR AQUÍ -->  
+ 
   <script>  
-    // Verificar autenticación antes de cargar la página  
+      
     if (!sessionStorage.getItem("accessToken")) {  
       alert("Debes iniciar sesión primero");  
       window.location.href = "index.html";  
@@ -22,14 +22,11 @@
   <a href="usuarios.html" class="btn btn-light me-2">Ver Usuarios</a>  
   <button class="btn btn-light" onclick="cerrarSesion()">Cerrar sesión</button>  
 </div>
-  <!-- NAVBAR -->  
-  <nav class="navbar navbar-dark" style="background-color: rgba(118, 158, 158, 0.815);">  
-  ...
 
-  <!-- NAVBAR -->
+  
   <nav class="navbar navbar-dark" style="background-color: rgba(118, 158, 158, 0.815);">
     <div class="container-fluid">
-      <!-- Logo e inicio -->
+      
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="logoClinica.png" alt="Logo" height="60" class="me-2">
         <span>Panel de Administración</span>
@@ -43,7 +40,7 @@
 
   <main class="container my-4">
 
-    <!-- FORMULARIO PARA AGREGAR MÉDICOS -->
+    
     <div class="card shadow">
       <div class="card-header text-white" style="background-color: rgba(118, 158, 158, 0.815);">
         <h3>Agregar nuevo médico</h3>
@@ -66,7 +63,7 @@
       </div>
     </div>
 
-    <!-- LISTADO DE MÉDICOS -->
+  
     <section class="container my-5">
       <h3>Listado de Médicos</h3>
       <div id="doctors-list-container" class="d-flex flex-wrap gap-3"></div>
@@ -74,7 +71,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+
   <footer class="text-center p-3">
     <p>© 2025 Clínica Médica — Panel de Administración</p>
   </footer>

@@ -171,6 +171,11 @@ footer .redes-sociales a:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.card-img-top {
+    object-fit: contain;
+    max-height: 13rem;
+}
+
 .doctor-img {
     width: 100px;
     height: 100px;
@@ -199,6 +204,16 @@ footer .redes-sociales a:hover {
 }
 
 /* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    /* 1. Aplicamos el mismo fondo de tu navbar */
+    background-color: rgba(118, 158, 158, 0.815);
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.25rem;
+  }
+}
 @media screen and (max-width: 768px) {
     main {
         padding-top: 140px;
